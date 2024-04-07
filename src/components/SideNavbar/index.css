@@ -1,0 +1,39 @@
+.items-container {
+}
+.nav-items-container {
+  list-style-type: none;
+  padding-left: 0px;
+  background-color: rgb(193, 178, 178);
+}
+.nav-item {
+  background-color: aqua;
+}
+.active-nav-item {
+  background-color: white;
+}
+.link-item {
+  text-decoration: none;
+  color: rgb(0, 106, 255);
+  font-size: 30px;
+}
+.active-link-item {
+  color: green;
+}
+.sm-nav-container {
+  min-height: 100vh;
+}
+.lg-nav-container {
+  display: none;
+  background-color: black;
+  min-height: 100vh;
+}
+
+@media screen and (min-width: 500px) {
+  .sm-nav-container {
+    display: none;
+  }
+  .lg-nav-container {
+    display: block;
+    width: 24%;
+  }
+}
