@@ -1,0 +1,89 @@
+.population-main-container {
+  background-color: rgb(15, 35, 54);
+  min-height: 100vh;
+  display: flex;
+  width: 100%;
+  margin: 0;
+}
+
+.population-container {
+  min-height: 90vh;
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.population-nav-section {
+  display: flex;
+  justify-content: end;
+  background-color: #101820ff;
+}
+.population-details-container {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-self: center;
+}
+.population-description {
+  color: yellow;
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 15px;
+  padding: 10px;
+}
+.population-heading {
+  font-size: 26px;
+  color: yellow;
+  text-align: center;
+  font-weight: bold;
+  margin: 10px;
+  margin-bottom: 30px;
+}
+.loader-container {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-text {
+  color: gold;
+  font-size: 25px;
+}
+.retry-btn {
+  background-color: gold;
+  color: #101820ff;
+  font-weight: bold;
+  cursor: pointer;
+  border-style: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+@media screen and (min-width: 768px) {
+  .population-main-container {
+    display: flex;
+    width: 100%;
+  }
+  .population-sidebar-container {
+    width: 25%;
+  }
+  .population-details-container {
+    flex-grow: 1;
+
+    width: 70%;
+  }
+  .population-heading {
+    font-size: 35px;
+    padding: 20px;
+  }
+  .population-container {
+    width: 75%;
+  }
+}

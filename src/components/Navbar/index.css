@@ -1,0 +1,22 @@
+.name {
+  font-size: 25px;
+  color: rgb(123, 255, 22);
+  padding: 10px;
+
+  align-items: center;
+}
+.greet {
+  color: rgb(123, 255, 22);
+  text-align: center;
+  padding: 10px;
+  padding-top: 0;
+}
+.navbar {
+  margin-right: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 35px;
+}

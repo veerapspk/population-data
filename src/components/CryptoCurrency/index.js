@@ -1,6 +1,12 @@
+import SideNavbar from "../SideNavbar";
+<SideNavbar />;
+
 const CryptoCurrency = () => (
-  <div>
-    <h1>this is crypto</h1>
+  <div className="home-main-container">
+    <SideNavbar active="crypto" />
+    <div className="home-details-container">
+      <h1>Crypto container</h1>
+    </div>
   </div>
 );
 

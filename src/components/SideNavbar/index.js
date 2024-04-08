@@ -3,23 +3,43 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Sidebar from "react-sidebar";
 import { FiAlignJustify } from "react-icons/fi";
+import { FaWindowClose } from "react-icons/fa";
 
 import "./index.css";
 
-const SideNavbar = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+const SideNavbar = (props) => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const onSetSidebarOpen = (open) => {
     setSidebarOpen(open);
   };
+
   const renderNavItems = (screenSize) => (
-    <>
-      {screenSize === "sm" && (
-        <button onClick={() => onSetSidebarOpen(false)}>
-          {" "}
-          <FiAlignJustify size={30} color="green" />
-        </button>
-      )}
+    <div className="sidebar-main-container">
+      <div className="btn-and-logo-container">
+        {screenSize === "sm" && (
+          <button
+            type="button"
+            className="sidebar-close-btn"
+            onClick={() => onSetSidebarOpen(false)}
+          >
+            {" "}
+            <FaWindowClose size={30} color=" #fee715ff" />
+          </button>
+        )}
+
+        {screenSize !== "sm" && (
+          <button className="hamburger-btn">
+            {" "}
+            <FiAlignJustify size={30} color=" #fee715ff" />
+          </button>
+        )}
+        <img
+          src="https://www.clker.com/cliparts/s/c/4/G/5/D/earth-yellow-md.png"
+          className="logo-img"
+          alt="logo"
+        />
+      </div>
       <ul className="nav-items-container">
         <li
           className={`${
@@ -84,28 +104,36 @@ const SideNavbar = () => {
           </Link>
         </li>
       </ul>
-    </>
+    </div>
   );
 
-  const active = "about";
+  const { active } = props;
 
   return (
-    <>
+    <div className="sidebar-container">
       <div className="sm-nav-container">
         <Sidebar
           sidebar={renderNavItems("sm")}
           open={sidebarOpen}
           onSetOpen={onSetSidebarOpen}
-          styles={{ sidebar: { backgroundColor: "black", width: "80%" } }}
+          styles={{
+            sidebar: {
+              backgroundColor: " #101820ff",
+              width: "80%",
+            },
+          }}
         >
-          <button onClick={() => onSetSidebarOpen(true)}>
+          <button
+            className="hamburger-btn"
+            onClick={() => onSetSidebarOpen(true)}
+          >
             {" "}
-            <FiAlignJustify size={30} color="green" />
+            <FiAlignJustify size={30} color="#101820ff" />
           </button>
         </Sidebar>
       </div>
       <div className="lg-nav-container">{renderNavItems()}</div>
-    </>
+    </div>
   );
 };
 
