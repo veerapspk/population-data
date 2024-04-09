@@ -9,6 +9,8 @@ const instagramUrl =
 const youtubeUrl =
   "https://res.cloudinary.com/dddpdcdmk/image/upload/v1670671127/youtubeyoutube_hhurpn.png";
 
+  let dummy;
+
 const Footer = () => (
   <div className="footer-bg">
     <div className="footer-images-container">
