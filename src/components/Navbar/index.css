@@ -1,15 +1,21 @@
 .name {
   font-size: 25px;
   color: rgb(123, 255, 22);
+  line-height: 1;
   padding: 10px;
-
   align-items: center;
+  margin-bottom: 0;
 }
 .greet {
   color: rgb(123, 255, 22);
   text-align: center;
-  padding: 10px;
-  padding-top: 0;
+  margin-top: 0;
+
+  line-height: 1;
+}
+.title {
+  font-weight: bold;
+  color: rgb(239, 255, 12);
 }
 .navbar {
   margin-right: 20px;

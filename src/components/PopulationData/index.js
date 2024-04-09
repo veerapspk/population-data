@@ -1,19 +1,11 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 import { RingLoader } from "react-spinners";
-import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
-} from "recharts";
 
 import SideNavbar from "../SideNavbar";
 import Navbar from "../Navbar";
+import Footer from "../Footer";
+import PopulationCard from "../PopulationCard";
 import "./index.css";
 
 const apiConstants = {
@@ -75,33 +67,14 @@ const PopulationData = () => {
       <h1 className="population-heading">
         Population Trends in the United States Over Time
       </h1>
-      <ResponsiveContainer width="100%" height={350}>
-        <BarChart
-          data={populationData}
-          margin={{
-            top: 5,
-            right: 20,
-            left: 30,
-            bottom: 5,
-          }}
-        >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis
-            dataKey="Year"
-            tick={{ fill: "#636acf", fontWeight: "bold" }}
-          />
-          <YAxis tick={{ fill: "#636acf", fontWeight: "bold" }} />
-          <Tooltip />
-          <Legend />
-          <Bar dataKey="Population" fill="#42f545" />
-        </BarChart>
-      </ResponsiveContainer>
+      <PopulationCard data={populationData} />
       <p className="population-description">
         Explore the population trends of the United States over the past decade
         with this interactive graph. This graph visualizes the population data
         from 2013 to 2021, obtained from the United States Census Bureau. Each
         data point represents the population count for a specific year
       </p>
+      <Footer />
     </div>
   );
   const renderLoader = () => (
@@ -120,7 +93,7 @@ const PopulationData = () => {
 
   return (
     <div className="population-main-container">
-      <SideNavbar active="population" />
+      <SideNavbar active="Population-Data" />
       <div className="population-container">
         <div className="population-nav-section">
           <Navbar />

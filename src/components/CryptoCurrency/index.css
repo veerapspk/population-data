@@ -1,0 +1,23 @@
+.crypto-description {
+  color: rgb(111, 255, 44);
+}
+
+.crypto-details-container {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  justify-content: center;
+  padding: 10px;
+  align-self: center;
+}
+.crypto-date {
+  font-weight: bold;
+  color: greenyellow;
+  font-size: 20px;
+}
+.date {
+  font-size: 15px;
+  color: azure;
+}

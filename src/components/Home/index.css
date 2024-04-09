@@ -1,0 +1,38 @@
+.home-container {
+  padding: 30px;
+  padding-bottom: 0;
+}
+
+.main-head {
+  color: #fee715ff;
+  margin-bottom: 10px;
+}
+.main-description {
+  color: rgb(244, 232, 102);
+}
+
+h2 {
+  color: rgb(255, 96, 17);
+  font-size: 18px;
+  line-height: 1;
+  margin-bottom: 0;
+}
+.para {
+  color: rgb(5, 244, 224);
+  font-size: 15px;
+  margin-top: 0;
+}
+.bottom-head {
+  color: rgb(255, 8, 8);
+  margin-bottom: 0;
+  margin-top: 30px;
+}
+.bottom-para {
+  color: rgb(255, 176, 127);
+  margin-top: 10px;
+}
+@media screen and (min-width: 768px) {
+  .home-container {
+    padding: 30px 50px;
+  }
+}

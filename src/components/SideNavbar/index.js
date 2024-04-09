@@ -1,4 +1,3 @@
-import Modal from "react-modal";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Sidebar from "react-sidebar";
@@ -6,6 +5,12 @@ import { FiAlignJustify } from "react-icons/fi";
 import { FaWindowClose } from "react-icons/fa";
 
 import "./index.css";
+
+const navItemsList = [
+  { name: "Home", path: "/" },
+  { name: "Population-Data", path: "/population-data" },
+  { name: "Crypto-Currency", path: "/crypto-currency" },
+];
 
 const SideNavbar = (props) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -41,68 +46,25 @@ const SideNavbar = (props) => {
         />
       </div>
       <ul className="nav-items-container">
-        <li
-          className={`${
-            active === "home" ? "nav-item active-nav-item" : "nav-item"
-          }`}
-        >
-          {" "}
-          <Link
+        {navItemsList.map((each) => (
+          <li
             className={`${
-              active === "home" ? "link-item active-link-item" : "link-item"
+              active === each.name ? "nav-item active-nav-item" : "nav-item"
             }`}
-            to="/"
           >
-            Home
-          </Link>
-        </li>
-        <li
-          className={`${
-            active === "about" ? "nav-item active-nav-item" : "nav-item"
-          }`}
-        >
-          {" "}
-          <Link
-            className={`${
-              active === "about" ? "link-item active-link-item" : "link-item"
-            }`}
-            to="/about"
-          >
-            About
-          </Link>
-        </li>
-        <li
-          className={`${
-            active === "population" ? "nav-item active-nav-item" : "nav-item"
-          }`}
-        >
-          {" "}
-          <Link
-            className={`${
-              active === "population"
-                ? "link-item active-link-item"
-                : "link-item"
-            }`}
-            to="/population-data"
-          >
-            Population
-          </Link>
-        </li>
-        <li
-          className={`${
-            active === "crypto" ? "nav-item active-nav-item" : "nav-item"
-          }`}
-        >
-          {" "}
-          <Link
-            className={`${
-              active === "crypto" ? "link-item active-link-item" : "link-item"
-            }`}
-            to="/crypto-currency"
-          >
-            crypto currency
-          </Link>
-        </li>
+            {" "}
+            <Link
+              className={`${
+                active === each.name
+                  ? "link-item active-link-item"
+                  : "link-item"
+              }`}
+              to={each.path}
+            >
+              {each.name}
+            </Link>
+          </li>
+        ))}
       </ul>
     </div>
   );
@@ -138,6 +100,3 @@ const SideNavbar = (props) => {
 };
 
 export default SideNavbar;
-/* <div>
-    
-  </div>*/
